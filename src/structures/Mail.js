@@ -2,6 +2,7 @@ const Imap = require('imap');
 const inspect = require('util').inspect;
 const webhook = require('./Webhook');
 const config = require('../../.config.js');
+let done = 0;
 
 function mail(user, password, host, port, tls, id, enableWebhook) {
     const imap = new Imap({
@@ -61,8 +62,9 @@ function mail(user, password, host, port, tls, id, enableWebhook) {
        
     imap.once('end', () => {
         console.log(prefix + 'Connection ended');
+        done++;
         // Send webhook output file
-        if(enableWebhook == true) {
+        if(enableWebhook == true && done == 2) {
             webhook(config.webhook);
         }
     });
