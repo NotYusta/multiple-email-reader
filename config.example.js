@@ -7,7 +7,7 @@ module.exports = {
                 host: 'imap.gmail.com',
                 port: 993,
                 tls: true,
-                id: '1'
+                id: 2
             },
             user2: {
                 user: '',
@@ -15,9 +15,10 @@ module.exports = {
                 host: 'imap.gmail.com',
                 port: 993,
                 tls: true,
-                id: '2'
+                id: 2
             },
         },
+        amount: 2
     },
     webhook: ''
 }

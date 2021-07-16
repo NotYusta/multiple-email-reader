@@ -64,7 +64,7 @@ function mail(user, password, host, port, tls, id, enableWebhook) {
         console.log(prefix + 'Connection ended');
         done++;
         // Send webhook output file
-        if(enableWebhook == true && done == 2) {
+        if(enableWebhook == true && done == config.email.amount) {
             webhook(config.webhook);
         }
     });
