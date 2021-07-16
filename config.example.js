@@ -6,15 +6,18 @@ module.exports = {
                 password: 'mygmailpassword',
                 host: 'imap.gmail.com',
                 port: 993,
-                tls: true
+                tls: true,
+                id: '1'
             },
             user2: {
                 user: '',
                 password: 'mygmailpassword',
                 host: 'imap.gmail.com',
                 port: 993,
-                tls: true
+                tls: true,
+                id: '2'
             },
         },
-    }
+    },
+    webhook: ''
 }
